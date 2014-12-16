@@ -25,7 +25,7 @@ filter是一个perl格式的可执行文件，它可以调用rlwrap提供的一�
 ```Bash
 sudo apt-get install rlwrap
 ```
-就可以了。将新设计grace和gunplo脚本拷贝到路径/usr/share/rlwrap/filters/，这个路径是rlwrap的filters路径，不同系统上可能不同，需要预先确认。
+这样简单安装就可以了，之后就是安装GNUPlot或Grace这就不必说了。将新设计grace和gunplo脚本拷贝到路径/usr/share/rlwrap/filters/，这个路径是rlwrap的filters路径，不同系统上可能不同，需要预先确认。
 使用命令行
 ```Bash
 sudo cp grace /usr/share/rlwrap/filters/grace
@@ -44,12 +44,11 @@ rlwrap -z listing
 
 使用操作
 -----------
-调用方式：
-**grace**命令：
+调用**grace**命令：
 ```Bash
 rlwrap -a -A -z grace -c -pGreen  grace
 ```
-**gnuplot**命令：
+调用**gnuplot**命令：
 ```Bash
 rlwrap -a -A -z gnuplot -c -pGreen  gnuplot
 ```
@@ -61,10 +60,10 @@ rlwrap -a -A -z gnuplot -c -pGreen  gnuplot
 alias grace='rlwrap -a -A -z grace -c -pBlue grace'
 alias gnuplot='rlwrap -a -A -z gnuplot -c -pBlue gnuplot'
 ```
-直接重命名grace
+直接重命名grace。
 
 通过以上操作设置之后，我们就可以在命令行调用gunplot和grace命令，进入交互界面。提示符被设置了所选择的颜色，
-另外输入命令的前几个字母，按tab键就可以进行自动补齐。
+另外输入命令的前几个字母，按tab键就可以进行自动补齐。附参考例图：
 
 ![rlwrap_grace] (res/rlwrap_grace.png "rlwrap_grace")
 ![rlwrap_gnuplot] (res/rlwrap_gnuplot.png "rlwrap_gnuplot")
@@ -72,4 +71,5 @@ alias gnuplot='rlwrap -a -A -z gnuplot -c -pBlue gnuplot'
 Contact
 =====
 Author: Shun Xu <AlwinTsui@gmail.com>
+
 Date: December 12, 2014
